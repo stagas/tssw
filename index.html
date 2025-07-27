@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>tssw - TypeScript in the browser, no build step, using SW</title>
+  <script type="importmap">
+    {
+      "imports": {
+        "preact/jsx-runtime": "https://esm.sh/preact/jsx-runtime"
+      }
+    }
+  </script>
+</head>
+
+<body style="background: #333; color: #888;">
+  <script>navigator.serviceWorker.register('/sw.js')</script>
+  <script type="module" src="./script.tsx"></script>
+</body>
+
+</html>

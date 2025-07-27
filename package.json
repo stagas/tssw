@@ -1,0 +1,21 @@
+{
+  "name": "tssw",
+  "version": "1.0.0",
+  "description": "TypeScript in the browser, no build step, using SW",
+  "main": "bundle.js",
+  "files": "bundle.js",
+  "author": {
+    "name": "stagas",
+    "email": "gstagas@gmail.com",
+    "url": "https://github.com/stagas"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stagas/tssw.git"
+  },
+  "devDependencies": {
+    "@swc/wasm-web": "^1.13.2",
+    "@types/bun": "latest"
+  }
+}
