@@ -25,14 +25,19 @@ self.registerTs = (
   self.addEventListener('fetch', (event) => {
     const url = new URL(event.request.url)
 
-    if (url.pathname.endsWith('.ts') || url.pathname.endsWith('.tsx')) {
+    if (
+      url.pathname.endsWith('.ts')
+      || url.pathname.endsWith('.tsx')
+      || url.pathname.endsWith('.jsx')
+    ) {
+      const filename = url.pathname.split('/').pop().replace(/\.jsx$/, '.tsx')
       event.respondWith((async () => {
         const res = await fetch(url.toString(), {
           cache: isDebug ? 'no-cache' : 'default',
         })
         const body = await res.text()
         const { code } = transformSync(body, {
-          filename: url.pathname.split('/').pop(),
+          filename,
           jsc: { transform: config },
         })
         return new Response(code, { headers })

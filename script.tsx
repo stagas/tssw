@@ -1,3 +1,4 @@
-export const foo: string = 'foo'
+import { foo } from './foo.jsx'
+
 console.log(foo)
 console.log(<div />)

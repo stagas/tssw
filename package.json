@@ -1,6 +1,6 @@
 {
   "name": "tssw",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "TypeScript in the browser, no build step, using SW",
   "main": "bundle.js",
   "files": "bundle.js",
@@ -14,6 +14,10 @@
     "type": "git",
     "url": "git+https://github.com/stagas/tssw.git"
   },
+  "scripts": {
+    "build": "bun build entry.js --outfile=bundle.js && sed -i \"s|new URL(\\\"wasm_bg.wasm\\\", import.meta.url)|new URL('https://esm.sh/@swc/wasm-web@1.13.2/es2022/wasm_bg.wasm')|\" bundle.js"
+  },
+  "type": "module",
   "devDependencies": {
     "@swc/wasm-web": "^1.13.2",
     "@types/bun": "latest"

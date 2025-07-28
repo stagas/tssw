@@ -9,7 +9,7 @@ Create a Service Worker and put it at the root of your static directory.
 
 ### `/sw.js`:
 ```js
-importScripts('https://unpkg.com/tssw@1.0.0/bundle.js')
+importScripts('https://unpkg.com/tssw@1.1.0/bundle.js')
 
 self.registerTs({
   react: {
@@ -26,7 +26,7 @@ Register it and you're ready to import TypeScript files.
 <!-- Register the Service Worker -->
 <script>navigator.serviceWorker.register('/sw.js')</script>
 
-<!-- Scripts with extensions .ts and .tsx will be transpiled automagically -->
+<!-- Scripts with extensions .ts, .tsx or .jsx will be transpiled automagically -->
 <script type="module" src="./script.tsx"></script>
 ```
 
