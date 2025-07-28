@@ -30,6 +30,10 @@ Register it and you're ready to import TypeScript files.
 <script type="module" src="./script.tsx"></script>
 ```
 
+## Caveats
+
+- It will most likely require a refresh initially, so this isn't useful to be deployed. Check out [tsbro](https://github.com/stagas/tsbro) for a solution to that.
+
 ## Support
 
 <a href="https://www.buymeacoffee.com/stagas" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
